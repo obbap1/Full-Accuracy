@@ -41,7 +41,7 @@ const factorial = (num) => {
       answer += `${store[x]}`
     }
 
-    return Number(answer);
+    return BigInt(answer);
 }
 
 
