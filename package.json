@@ -4,7 +4,7 @@
   "description": "This library helps you get the full length of a factorial, without the floating point inaccuracy messing with it ",
   "main": "factorial.js",
   "scripts": {
-    "test": "npm test"
+    "test": "jest"
   },
   "keywords": [
     "Factorial",
@@ -13,7 +13,8 @@
   ],
   "author": "Obba Paschal",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "jest": "^24.9.0"
   }
 }

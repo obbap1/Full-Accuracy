@@ -7,14 +7,10 @@ const multiply = (num, array, size) => {
     for(let i = 0; i < size; i +=1){
         let prod = array[i] * num + carry;
 
-        console.log({prod});
-
         array[i] = prod % 10;
 
         carry = Math.floor(prod/10);
     }
-
-    console.log({array, carry, size})
 
     while(carry){
         array[size] = carry % 10;
@@ -45,7 +41,7 @@ const factorial = (num) => {
       answer += `${store[x]}`
     }
 
-    return answer;
+    return Number(answer);
 }
 
 
