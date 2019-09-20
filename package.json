@@ -1,0 +1,19 @@
+{
+  "name": "full-accuracy",
+  "version": "1.0.0",
+  "description": "This library helps you get the full length of a factorial, without the floating point inaccuracy messing with it ",
+  "main": "factorial.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "Factorial",
+    "floating",
+    "point"
+  ],
+  "author": "Obba Paschal",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
