@@ -1,48 +1,15 @@
-// This code is inspired by Nikita Tiwari. 
+// This code is inspired by Nikita Tiwari.
 
-const multiply = (num, array, size) => {
-
-    let carry = 0;
-
-    for(let i = 0; i < size; i +=1){
-        let prod = array[i] * num + carry;
-
-        array[i] = prod % 10;
-
-        carry = Math.floor(prod/10);
-    }
-
-    while(carry){
-        array[size] = carry % 10;
-        carry = Math.floor(carry / 10);
-        size += 1;
-    }
-
-    return size;
-}
-
-const factorial = (num) => {
-    /*
-        @param{Number} num The number we want to calculate the factorial for.
-        @return {Number} answer The result of the factorial.
-    */
-    const store = [];
-    let answer = '';
-
-    store[0] = 1;
-    let len = 1;
-
-    for(let x = 2; x <= num; x+=1){
-        len = multiply(x, store, len);
-    }
-
-
-    for(let x = len - 1; x >= 0; x--){
-      answer += `${store[x]}`
-    }
-
-    return BigInt(answer);
-}
-
+const factorial = num => {
+  /*
+    @param{Number} num The number we want to calculate the factorial for.
+    @return {Number} answer The result of the factorial.
+  */
+  if (num === 1 || num === 0) return num;
+  const fact = factorial(num - 1);
+  // return BigInt for only unsafe_integers or large number
+  if (!Number.isSafeInteger(fact)) return BigInt(num) * BigInt(fact);
+  return num * fact;
+};
 
 module.exports = factorial;
