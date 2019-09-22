@@ -12,6 +12,6 @@ const accuracy = require('full-accuracy');
 
 const for30 = accuracy(30);
 
-// returns 265252859812191058636308480000000
+// returns 265252859812191058636308480000000n
 
 ```
